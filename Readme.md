@@ -1,7 +1,7 @@
-# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+﻿# Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Павлов](https://up.htmlacademy.ru/adaptive/7/user/109209).
-* Наставник: `Неизвестно`.
+* Наставник: `Наставника нет`.
 
 ---
 
