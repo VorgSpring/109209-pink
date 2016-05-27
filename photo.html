@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>PINK Form</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header conteiner clearfix">
+        <div class="page-header__logo">
+            <a href="#">PINK</a>
+        </div>
+        <nav class="main-navigation">
+            <span class="main-navigation__toggle main-navigation__toggle--closed">Открыть меню</span>
+            <ul class="main-navigation__items main-navigation__items--closed">
+                <li class="main-navigation__item"><a href="#">главная</a></li>
+                <li class="main-navigation__item"><a href="#">фотографии</a></li>
+                <li class="main-navigation__item"><a href="#">конкурс</a></li>
+                <li class="main-navigation__item"><a href="#">hmtl academy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteiner">
+        <header class="pink-intro">
+            <h1 class="pink-intro__title">Фотографии пользователей</h1>
+        </header>
+        <section class="photo">
+            <h2 class="photo__title">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</h2>
+            <figure class="photo__item photo__item--panorama">
+                <a class="photo__image photo__image--panorama"><img src="img/panorama-mobile.jpg" alt="панорама дня"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Анна</span>
+                    <span class="photo__time">(5 минут назад)</span>
+                    <p class="photo__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+                    <span class="photo__like">Нравится: 215</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Левона"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Левон</span>
+                    <span class="photo__time">(5 часов назад)</span>
+                    <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                    <span class="photo__like">Нравится: 356</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Антона"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Антон</span>
+                    <span class="photo__time">(12 часов назад)</span>
+                    <p class="photo__description">Соседи будут рады!</p>
+                    <span class="photo__like">Нравится: 666</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Бориса"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Борис</span>
+                    <span class="photo__time">(20 часов назад)</span>
+                    <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                    <span class="photo__like">Нравится: 215</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Сергея"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Сергей</span>
+                    <span class="photo__time">(25 часов назад)</span>
+                    <p class="photo__description">Самая кубанская в мире!</p>
+                    <span class="photo__like">Нравится: 4</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Максима"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Максим</span>
+                    <span class="photo__time">(40 часов назад)</span>
+                    <p class="photo__description">Где снег-то?</p>
+                    <span class="photo__like">Нравится: 150</span>
+                </figcaption>
+            </figure>
+            <figure class="photo__item">
+                <a class="photo__image"><img src="http://placehold.it/280x180" width="280" height="180" alt="фото Надежды"></a>
+                <figcaption>
+                    <span class="photo__auhor-name">Надежда</span>
+                    <span class="photo__time">(45 часов назад)</span>
+                    <p class="photo__description">Всем GM и взаимные лайки!</p>
+                    <span class="photo__like">Нравится: 2560</span>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="redactor clearfix">
+            <h2 class="redactor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</h2>
+            <a class="redactor__upload">
+                <img class="redactor__image" src="http://placehold.it/280x374" width="280" height="374" alt="редактируемое фото">
+            </a>
+            <div class="redactor__tools">
+                <label class="redactor__tool redactor__tool--pruning redactor__tool--active" for="pruning">обрезка</label>
+                <label class="redactor__tool redactor__tool--saturation" for="saturation">насыщенность</label>
+                <label class="redactor__tool redactor__tool--contrast" for="contrast">контраст</label>
+                <input class="redactor__input redactor__input--pruning redactor__input--active" type="range" name="pruning" id="pruning" min="0" max="100" step="5">
+                <input class="redactor__input redactor__input--saturation" type="range" name="saturation" id="saturation" min="0" max="100" step="5">
+                <input class="redactor__input redactor__input--contrast" type="range" name="contrast" id="contrast" min="0" max="100" step="5">
+                <div class="redactor__buttons">
+                    <button class="redactor__button" type="button">Запостить</button>
+                    <button class="redactor__button redactor__button--inactive" type="button">Отмена</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer conteiner">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__logo"><span>PINK</span></div>
+            <div class="page-footer__social">
+                <div class="social-links">
+                    <a href="#" class="social-link social-link--tw">twitter</a>
+                    <a href="#" class="social-link social-link--fb">facebook</a>
+                    <a href="#" class="social-link social-link--yt">youtube</a>
+                </div>
+            </div>
+            <div class="page-footer__copyright"><a href="#" class="page-footer__copyright-link">Разработано</a></div>
+        </div>
+    </footer>
+</body>
+</html>

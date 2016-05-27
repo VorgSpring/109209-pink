@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+    <title>PINK Form</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="page-header conteiner clearfix">
+        <div class="page-header__logo">
+            <a href="#">PINK</a>
+        </div>
+        <nav class="main-navigation">
+            <span class="main-navigation__toggle main-navigation__toggle--closed">Открыть меню</span>
+            <ul class="main-navigation__items main-navigation__items--closed">
+                <li class="main-navigation__item"><a href="#">главная</a></li>
+                <li class="main-navigation__item"><a href="#">фотографии</a></li>
+                <li class="main-navigation__item"><a href="#">конкурс</a></li>
+                <li class="main-navigation__item"><a href="#">hmtl academy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="conteiner">
+        <header class="pink-intro">
+            <h1 class="pink-intro__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        </header>
+        <section class="form-main-history">
+            <h3 class="form-main-history__form-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</h3>
+            <form action="#" method="post" class="form-main-history__main-form">
+                <fieldset class="form-main-history__personal-data">
+                    <label for="name">Имя:</label>
+                    <input type="text" name="name" id="name" placeholder="Введите ваше имя">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" name="surname" id="surname" placeholder="Укажите фамилию">
+                    <label for="middle-name">Отчество:</label>
+                    <input type="text" name="middle-name" id="middle-name" placeholder="Ну и отчество тоже">
+                </fieldset>
+                <fieldset class="form-main-history__achievements">
+                    <legend>Ваши безбашенные достижения в путешествии</legend>
+                    <label for="selfy">Сделал селфи с акулой</label>
+                    <input type="checkbox" name="selfy-with-shark" id="selfy" checked>
+                    <label for="burned">Обгорел на пляже</label>
+                    <input type="checkbox" name="burned-beach" id="burned" checked>
+                    <label for="Chuck-Norris">Видел Чака Норриса</label>
+                    <input type="checkbox" name="Chuck-Norris" id="Chuck-Norris">
+                    <label for="souvenirs">Накупил сувениров</label>
+                    <input type="checkbox" name="souvenirs" id="souvenirs">
+                    <label for="kept-tower">Удержал башню</label>
+                    <input type="checkbox" name="kept-tower" id="kept-tower" checked>
+                    <label for="trashed-hote">Разгромил отель</label>
+                    <input type="checkbox" name="trashed-hotel" id="trashed-hotel">
+                </fieldset>
+                <fieldset class="form-main-history__contact">
+                    <label for="tel">Номерок телефончика</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+                    <label for="email">адресок почты</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail, пожалуйста">
+                </fieldset>
+                <fieldset class="form-main-history__travel-app">
+                    <legend>С каким приложением путешествовали?</legend>
+                    <label for="ios">Pink для iOS</label>
+                    <input type="radio" name="ios" id="ios" checked>
+                    <label for="android">Pink на Android</label>
+                    <input type="radio" name="android" id="android">
+                    <label for="windows">Windows Phone</label>
+                    <input type="radio" name="windows" id="windows">
+                </fieldset>
+                <fieldset class="form-main-history__emotions">
+                    <label for="emotions">Опишите свои эмоции</label>
+                    <textarea name="emotions" id="emotions" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                </fieldset>
+                <input type="submit" class="form-main-history__form-button" value="Отправить форму">
+                <p class="form-main-history__conditions"><span>*</span>— обязательные поля</p>
+                <div class="form-main-history__successfully form-main-history__successfully--inactive">
+                    <h2>Ваша заявка отправлена</h2>
+                    <p>Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее иоповестим вас.</p>
+                    <button>ЗАКРЫТЬ ОКНО</button>
+                </div>
+                <div class="form-main-history__unsuccessful form-main-history__unsuccessful--inactive">
+                    <h2>Что-то пошло не так!</h2>
+                    <p>Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+                    <button>OK</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="page-footer  conteiner">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__logo"><span>PINK</span></div>
+            <div class="page-footer__social">
+                <div class="social-links">
+                    <a href="#" class="social-link social-link--tw">twitter</a>
+                    <a href="#" class="social-link social-link--fb">facebook</a>
+                    <a href="#" class="social-link social-link--yt">youtube</a>
+                </div>
+            </div>
+            <div class="page-footer__copyright"><a href="#" class="page-footer__copyright-link">Разработано</a></div>
+        </div>
+    </footer>
+</body>
+</html>
