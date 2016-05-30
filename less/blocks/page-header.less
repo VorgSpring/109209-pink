@@ -1,0 +1,93 @@
+﻿.page-header {
+    background: #1d2631 url("../../img/bg-back-mobile.jpg") no-repeat center -5px;
+
+    &__wrapper {
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 65px;
+        .container;
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    &__logos a {
+        display: block;
+        width: 80px;
+        height: 25px;
+
+        &:hover .logo--mobile {
+            fill: @magenta-color;
+        }
+
+        &:active .logo--mobile {
+            fill: white;
+            opacity: .3;
+        }
+    }
+
+    &__wrapper {
+        &--opened {
+            background-color: @common-color;
+            box-shadow: 0 1px 0 black, inset 0 -1px 0 rgba(0, 0, 0, .15);
+        }
+    }
+
+    @media @tablet-widths {
+        background: url("../../img/bg-back-tablet.jpg") no-repeat center 0;
+
+        &__container {
+            min-height: 110px;
+        }
+
+        &__logo {
+            display: block;
+
+            &--mobile {
+                display: none;
+            }
+        }
+
+        &__logos a {
+            width: 150px;
+            height: 40px;
+            padding-bottom: 15px;
+
+            & .logo__sparks {
+                opacity: 0;
+            }
+
+            &:hover .logo__letters,
+            &:hover .logo__glasses {
+                fill: @magenta-color;
+            }
+
+            &:active .logo__letters,
+            &:active .logo__glasses {
+                fill: white;
+                opacity: .3;
+            }
+        }
+    }
+
+    @media @desktop-widths {
+        background: url("../../img/bg-back-desktop.jpg") no-repeat center 0;
+
+        &__logos a {
+            & .logo__sparks {
+                opacity: 1;
+            }
+        }
+
+        &--opened {
+            background-color: rgba(0, 0, 0, .3);
+            box-shadow: none;
+        }
+    }
+}
