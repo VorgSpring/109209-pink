@@ -1,0 +1,134 @@
+﻿.form-main-history {
+    border: 1px solid blue;
+    & input {
+        display: none;
+    }
+    & input[type="text"], & input[type="tel"], 
+    & input[type="email"], & input[type="submit"] {
+        display: block;
+        padding: 20px;
+        width: 80%;
+        margin-bottom: 30px;
+    }
+    & input[type="submit"] {
+        width: 280px;
+    }
+    & label {
+        display: block;
+    }
+    &__form-title {
+        font-size: 14px;
+        padding: 50px 5px;
+    }
+    &__achievements, &__travel-app {
+        & legend {
+            padding: 40px 10px;
+        }
+        & label {
+            padding-left: 70px;
+            margin-bottom: 45px;
+        }
+    }
+    &__emotions {
+        padding: 0;
+        text-align: center;
+    }
+    &__successfully {
+        &--inactive {
+            display: none;
+        }
+    }
+    &__unsuccessful {
+        &--inactive {
+            display: none;
+        }
+    }
+
+    @media @tablet-widths {
+        &__contact {
+            position: relative;
+        }
+        &__personal-data {
+            & input[type="text"], 
+            & input[type="tel"], 
+            & input[type="email"] {
+                display: inline-block;
+                width: 75%;
+            }
+            & label {
+                display: inline-block;
+            }
+        }
+        &__contact label {
+            position: absolute;
+            top: 70px;
+            &[for="email"] {
+                top: 160px;
+            } 
+        }
+        & textarea {
+            width: 500px;
+        }
+        & input[type="submit"] {
+            display: inline-block;
+            width: 300px;
+            margin-right: 100px;
+        }
+        &__conditions {
+            display: inline-block;
+        }
+    }
+    @media @desktop-widths {
+        position: relative;
+        & fieldset {
+            display: inline-block;
+        }
+        &__personal-data {
+            width: 470px;
+            margin-right: 50px;
+            & input[type="text"], 
+            & input[type="tel"], 
+            & input[type="email"] {
+                width: 70%;
+            }
+        }
+        &__travel-app {
+            position: absolute;
+            right: 10px;
+            top: 110px;
+        }
+        &__achievements {
+            width:910px;
+            & label {
+                display: inline-block;
+                margin-right: 40px;
+            }
+        }
+        &__emotions {
+            width: 910px;
+            position: absolute;
+            bottom: 150px;
+            left: 0;
+        }
+        &__contact {
+            width: 910px;
+            padding-bottom: 300px;
+            & input[type="tel"], 
+            & input[type="email"] {
+                display: inline-block;
+                width: 360px;
+                margin-right: 50px;
+            }
+            & label[for="email"] {
+                top: 70px;
+                left: 480px;
+            }
+        }
+        & textarea {
+            width: 500px;
+        }
+        & input[type="submit"] {
+            margin-right: 320px;
+        }
+    }
+}
