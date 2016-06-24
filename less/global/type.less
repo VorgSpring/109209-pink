@@ -6,3 +6,48 @@
 li {
     list-style: none;
 }
+
+textarea{
+    resize: none;
+}
+
+input {
+    height: 30px;
+}
+
+input,
+textarea {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    color: @common-color;
+    padding: 14px 20px;
+    font-weight: 400;
+    line-height: 30px;
+    border: 2px solid @grey-background;
+    border-radius: 2px;
+}
+
+input:hover,
+textarea:hover {
+    border: 2px solid @common-color;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid @magenta-color;
+    outline: none;
+}
+
+::placeholder {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    color: @common-color;
+    padding: 14px 20px;
+    font-weight: 400;
+    line-height: 30px;
+    opacity: 1;
+}
+
+:focus::placeholder {
+    color: transparent;
+}
