@@ -1,8 +1,14 @@
 ﻿.pink-intro {
     .container;
+    padding-bottom: 1px;
 
     &--index {
-        background: url("../../img/iphone-hand-mobile.png") no-repeat 0 105px;
+        background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 105px;
+
+        @media @retina {
+            background-image: url("../img/iphone-hand-mobile@2x.png");
+            background-size: 50% auto;
+        }
     }
 
     &__container {
@@ -17,8 +23,13 @@
         font-weight: 300;
         color: white;
         text-align: center;
-        margin: 20px 0 312px 0;
-        min-height: 58px;
+        margin: 31px auto 54px;
+        min-height: 87px;
+
+        &--index {
+            margin: 20px 0 312px 0;
+            min-height: 58px;
+        }
     }
 
     &__download-app {
@@ -30,6 +41,7 @@
         border: 3px solid white;
         border-radius: 100px;
         background-color: transparent;
+        text-align: center;
         width: 280px;
         padding: 15px 0;
         margin: 30px auto;
@@ -60,15 +72,15 @@
         height: 60px;
 
         &--apple {
-            background: url("../../img/logo-apple.svg") no-repeat center;
+            background: url("../img/logo-apple.svg") no-repeat center;
         }
 
         &--android {
-            background: url("../../img/logo-android.svg") no-repeat center 10px;
+            background: url("../img/logo-android.svg") no-repeat center 10px;
         }
 
         &--microsoft {
-            background: url("../../img/logo-microsoft.svg") no-repeat center 15px;
+            background: url("../img/logo-microsoft.svg") no-repeat center 15px;
         }
     }
 
@@ -83,8 +95,14 @@
     }
 
     @media @tablet-widths {
+
         &--index {
-            background: url("../../img/iphone-hand-tablet@1x.png") no-repeat right 74px;
+            background: url("../img/iphone-hand-tablet@1x.png") no-repeat right 74px;
+
+            @media @retina {
+                background-image: url("../img/iphone-hand-tablet@2x.png");
+                background-size: 50% auto;
+            }
         }
 
         &__container {
@@ -94,16 +112,27 @@
         }
 
         &__title {
-            font-size: 40px;
-            line-height: 48px;
+            font-size: 50px;
+            line-height: 60px;
             text-align: center;
-            margin: 93px 50px 0px;
-            width: 200px;
+            margin: 69px 50px 0;
+            padding-bottom: 80px;
+            min-height: 180px;
+
+            &--index {
+                font-size: 40px;
+                line-height: 48px;
+                text-align: center;
+                margin: 93px 50px 0;
+                width: 200px;
+                padding-bottom: 0;
+                min-height: 144px;
+            }
         }
 
         &__download-app {
             width: 300px;
-            margin-bottom: 43px;
+            margin: 31px auto 43px;
         }
 
         &__app-items {
@@ -119,7 +148,12 @@
 
     @media @desktop-widths {
         &--index {
-            background: url("../../img/iphone-hand-desktop@1x.png") no-repeat 145px 98px;
+            background: url("../img/iphone-hand-desktop@1x.png") no-repeat 145px 98px;
+
+            @media @retina {
+                background-image: url("../img/iphone-hand-desktop@2x.png");
+                background-size: 50% auto;
+            }
         }
 
         &__container {
@@ -130,18 +164,25 @@
         &__title {
             font-size: 50px;
             line-height: 60px;
-            margin: 108px 28px 22px;
-            width: 240px;
+            margin-top: 62px;
+            min-height: 142px;
+
+            &--index {
+                margin: 108px 28px 22px;
+                width: 240px;
+                min-height: 144px;
+            }
+
+            &--photo {
+                padding: 0 100px 80px;
+            }
         }
 
         &__download-app {
             font-size: 21px;
             line-height: 18px;
-            padding: 13px 0 15px;
+            padding: 13px 0 16px;
             margin-bottom: 65px;
-        }
-
-        &__app-items {
         }
 
         &__availability {

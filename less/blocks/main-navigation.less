@@ -124,6 +124,35 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            &--opened {
+                position: static;
+                box-sizing: content-box;
+                padding-left: 40px;
+                flex-direction: row;
+                background-color: transparent;
+                width: 623px;
+            }
+
+            &--opened a {
+                text-transform: none;
+                display: inline;
+                text-align: center;
+                padding: 16px 0;
+
+                &:hover {
+                    color: white;
+                }
+
+                &:active {
+                    color: rgba(255, 255, 255, .3);
+                    border: none;
+                }
+            }
+
+            &--opened li {
+                box-shadow: none;
+            }
         }
 
         &__item a {
