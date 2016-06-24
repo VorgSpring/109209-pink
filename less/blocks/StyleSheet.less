@@ -1,0 +1,567 @@
+﻿.form-main-history {
+    &__title {
+        .container();
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 35px;
+        min-height: 90px;
+
+        span {
+            display: none;
+        }
+    }
+
+    &__main-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 auto;
+        padding: 0;
+
+        legend {
+            position: absolute;
+            width: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        fieldset {
+            position: relative;
+        }
+    }
+
+    &__wrapper {
+        background-color: @grey-background;
+
+        &--contact,
+        &--emotions,
+        &--submit {
+            background-color: transparent;
+        }
+    }
+
+    &__personal-data {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        input {
+            &[name="name"] {
+                margin-bottom: 20px;
+            }
+
+            &[name="surname"] {
+                margin-bottom: 16px;
+            }
+
+            &[name="middle-name"] {
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    &__input-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        .container();
+
+        label {
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 400;
+            color: @magenta-color;
+            margin-left: 22px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__achievements {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+        .container();
+        margin-top: 35px;
+        padding-top: 79px;
+
+        input {
+            display: none;
+
+            &:checked + label::before {
+                background: #fff url("../img/checked.svg") no-repeat center;
+            }
+        }
+
+        legend {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: @magenta-color;
+            text-transform: uppercase;
+            text-align: center;
+            min-height: 36px;
+            padding: 0 20px;
+            margin: 0 auto 43px;
+            top: -1px;
+        }
+
+        label {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 400;
+            color: @common-color;
+            padding-left: 69px;
+            margin-bottom: 52px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: 0;
+                width: 35px;
+                height: 35px;
+                background-color: #fff;
+                border: 2px solid @dark_grey-background;
+                border-radius: 2px;
+            }
+
+            &:hover::before {
+                border: 2px solid @common-color;
+            }
+
+            &:active::before {
+                border: 2px solid @magenta-color;
+            }
+        }
+    }
+
+    &__contact {
+        margin: 30px 0 38px;
+        padding: 0;
+        border: none;
+
+        legend {
+            display: none;
+        }
+
+        label:last-child {
+            display: none;
+        }
+
+        input {
+            margin-bottom: 17px;
+        }
+    }
+
+    &__travel-app {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+        .container();
+        margin-top: 35px;
+        padding-top: 76px;
+
+        legend {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: @magenta-color;
+            text-transform: uppercase;
+            text-align: center;
+            min-height: 36px;
+            padding: 0 20px;
+            margin: 0 auto 40px;
+            top: 1px;
+        }
+
+        input {
+            display: none;
+
+            &:checked + label::after {
+                background-color: @magenta-color;
+            }
+        }
+
+        label {
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 400;
+            color: @common-color;
+            padding-left: 69px;
+            margin-bottom: 45px;
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: 0;
+                width: 35px;
+                height: 35px;
+                background-color: #fff;
+                border: 2px solid @dark_grey-background;
+                border-radius: 50%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                left: 12px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+            }
+
+            &:hover::before {
+                border: 2px solid @common-color;
+            }
+
+            &:active::before {
+                border: 2px solid @magenta-color;
+            }
+        }
+    }
+
+    &__emotions {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        .container();
+        border: none;
+        margin: 59px auto 47px;
+        padding-top: 35px;
+
+        legend {
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 400;
+            color: @magenta-color;
+            text-transform: uppercase;
+            text-align: center;
+            min-height: 36px;
+            padding: 0 20px;
+            margin: auto;
+            top: 0;
+        }
+
+        textarea {
+            height: 200px;
+            padding-left: 19px;
+            flex-grow: 1;
+            box-sizing: border-box;
+            width: 100%;
+        }
+    }
+
+    &__submit {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        border: none;
+        .container();
+        margin-bottom: 41px;
+    }
+
+    &__button {
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #2aab6d;
+        border: none;
+        height: 63px;
+        box-sizing: border-box;
+        width: 100%;
+
+        &:hover {
+            background-color: #1c9b5e;
+        }
+
+        &:active {
+            color: rgba(255, 255, 255, .3);
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__conditions {
+        text-align: center;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: @common-color;
+        text-transform: uppercase;
+        margin-top: 35px;
+
+        span {
+            color: @magenta-color;
+        }
+    }
+
+    &__successfully {
+        &--inactive {
+            display: none;
+        }
+    }
+
+    &__unsuccessful {
+        &--inactive {
+            display: none;
+        }
+    }
+
+    @media @tablet-widths {
+        &__title {
+            font-size: 18px;
+            margin-top: 94px;
+            margin-bottom: 70px;
+            padding: 0 70px;
+
+            span {
+                display: block;
+            }
+        }
+
+        &__main-form {
+            padding: 0;
+
+            legend {
+                background-color: #fff;
+                padding-left: 16px;
+            }
+
+            input {
+                padding-left: 19px;
+            }
+        }
+
+
+        &__wrapper {
+            background-color: transparent;
+            padding: 0 40px;
+
+            &--achievements {
+                order: 3;
+                margin-bottom: 5px;
+            }
+
+            &--contact {
+                order: 2;
+                margin-bottom: 30px;
+
+                fieldset {
+                    padding: 45px 58px 26px;
+                }
+            }
+
+            &--travel-app {
+                order: 1;
+                margin-bottom: 65px;
+            }
+
+            &--emotions {
+                order: 4;
+                margin-bottom: 4px;
+            }
+
+            &--submit {
+                order: 5;
+                margin-bottom: 10px;
+            }
+        }
+
+        &__personal-data {
+            order: 0;
+
+            div {
+                flex-direction: row;
+                align-items: baseline;
+            }
+
+            label {
+                margin: 0 19px 5px 0;
+            }
+
+            input {
+                flex-grow: 1;
+
+                &[name="name"] {
+                    margin-bottom: 52px;
+                }
+
+                &[name="surname"] {
+                    margin-bottom: 55px;
+                }
+
+                &[name="middle-name"] {
+                    margin-bottom: 30px;
+                    padding-left: 18px;
+                }
+            }
+        }
+
+        &__achievements {
+            border: 2px solid @grey-background;
+            padding: 56px 57px 1px;
+
+            legend {
+                width: 400px;
+                top: -10px;
+            }
+
+            label {
+                padding-left: 60px;
+            }
+        }
+
+        &__contact {
+            border: 2px solid @grey-background;
+            .container();
+
+            div {
+                padding: 0;
+            }
+
+            legend {
+                display: block;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: 400;
+                color: @magenta-color;
+                text-transform: uppercase;
+                text-align: center;
+                min-height: 36px;
+                padding: 0 20px 0 16px;
+                margin: 0 auto 40px;
+                top: -10px;
+                width: 220px;
+            }
+
+            label {
+                position: relative;
+
+                &:first-child {
+                    display: none;
+                }
+
+                &:last-child {
+                    display: block;
+                    margin-bottom: 29px;
+                    margin-left: 19px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -71px;
+                    right: 2px;
+                    width: 60px;
+                    height: 58px;
+                    border-radius: 2px;
+                }
+
+                &[for='email'] {
+                    margin-bottom: 0;
+
+                    &::before {
+                        background: @grey-background url("../img/icon-mail.svg") no-repeat center;
+                    }
+                }
+
+                &[for='tel'] {
+                    &::before {
+                        background: @grey-background url("../img/icon-phone.svg") no-repeat center;
+                    }
+                }
+            }
+
+            input {
+                margin-bottom: 11px;
+            }
+        }
+
+        &__travel-app {
+            border: 2px solid @grey-background;
+            order: 1;
+            padding: 58px 58px 13px;
+
+            legend {
+                top: -9px;
+                width: 326px;
+            }
+
+            label {
+                padding-left: 59px;
+            }
+        }
+
+        &__emotions {
+            border: 2px solid @grey-background;
+            padding: 45px 58px 51px;
+
+            legend {
+                top: -9px;
+                width: 222px;
+            }
+
+            textarea {
+                height: 193px;
+            }
+        }
+
+        &__submit {
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 0;
+        }
+
+        &__button {
+            width: 48.2%;
+        }
+
+        &__conditions {
+            text-align: right;
+        }
+
+    }
+
+    @media @desktop-widths {
+        &__title {
+            margin-top: 92px;
+            margin-bottom: 40px;
+            padding: 0 200px;
+
+            span {
+                display: inline;
+            }
+        }
+
+        &__main-form {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            .container();
+        }
+
+        &__personal-data {
+            margin-top: 14px;
+
+            div {
+                padding: 0;
+                width: 435px;
+            }
+        }
+    }
+}

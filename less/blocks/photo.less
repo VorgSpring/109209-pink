@@ -1,0 +1,200 @@
+﻿.photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+        .container();
+        margin: 44px auto 49px;
+        padding: 0 35px;
+        min-height: 90px;
+    }
+
+    &__image {
+        display: block;
+
+        img {
+            display: block;
+        }
+    }
+
+    &__item {
+        width: 320px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+
+        &--panorama {
+            padding: 0;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "панорама дня";
+                font-size: 12px;
+                line-height: 24px;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                padding-top: 5px;
+                color: #fff;
+                background-color: @magenta-color;
+                width: 140px;
+                height: 31px;
+                top: 0;
+                right: 20px;
+            }
+        }
+    }
+
+    &__description {
+        background-color: @grey-background;
+        padding: 18px 18px 12px;
+        display: flex;
+        flex-direction: column;
+
+        &--panorama {
+            margin: 0 20px;
+        }
+    }
+
+    &__auhor-name {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0;
+
+        span {
+            font-size: 12px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+
+    &__comment {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+    }
+
+    &__like {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 24px;
+        color: @magenta-color;
+        text-transform: uppercase;
+        margin: 9px 0;
+        padding-left: 31px;
+        background: url("../img/icon-heart.svg") no-repeat 0 6px;
+    }
+
+    @media @tablet-widths {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: unset;
+        justify-content: center;
+        width: 700px;
+        margin: 0 auto;
+
+        &__title {
+            font-size: 18px;
+            margin: 93px auto 46px;
+            padding: 0 75px;
+        }
+
+        &__item {
+            width: 300px;
+            padding: 0;
+            margin: 0 10px 23px;
+
+            &--panorama {
+                width: 700px;
+                margin-bottom: 50px;
+
+                &::after {
+                    top: 57px;
+                    right: 40px;
+                }
+            }
+        }
+
+        &__description {
+            padding: 24px 27px 12px;
+
+            &--panorama {
+                margin: 0 40px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: baseline;
+                justify-content: space-between;
+                padding-bottom: 24px;
+
+                .photo__comment {
+                    flex-basis: auto;
+                    order: 2;
+                }
+
+                .photo__auhor-name {
+                    order: 0;
+                }
+
+                .photo__like {
+                    order: 1;
+                    margin: 0;
+                    padding-right: 32px;
+                    padding-left: 0;
+                    background-position: 107px 5px;
+                }
+            }
+        }
+
+        &__comment {
+            flex-basis: 50px;
+        }
+
+        &__like {
+            padding-left: 0;
+            background-position: 228px 6px;
+        }
+    }
+
+    @media @desktop-widths {
+        width: 1200px;
+
+        &__title {
+            margin: 92px auto 58px;
+            padding: 0 300px;
+        }
+
+        &__item {
+            margin-bottom: 58px;
+            &--panorama {
+                width: 1200px;
+                margin-bottom: 50px;
+
+                &::after {
+                    top: 54px;
+                    right: 131px;
+                }
+            }
+        }
+
+        &__description {
+            padding: 24px 27px 12px;
+
+            &--panorama {
+                padding-bottom: 23px;
+                margin: 0 130px;
+
+                .photo__like {
+                    padding-right: 36px;
+                }
+            }
+        }
+    }
+}
