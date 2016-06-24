@@ -1,0 +1,137 @@
+﻿.our-contacts {
+    position: relative;
+    min-height: 370px;
+
+    &__wrapper {
+        .container;
+    }
+
+    &::after {
+        background-image: linear-gradient(to right top, transparent 50%, #fff 50%), linear-gradient(to left top, transparent 50%, #fff 50%);
+        background-position: 0 0px, 100% 0;
+        background-repeat: no-repeat;
+        background-size: 50.1% 100%;
+        bottom: -34px;
+        content: "";
+        height: 34px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 300;
+        margin-top: 43px;
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__item {
+        font-size: 24px;
+        line-height: 30px;
+        font-weight: 300;
+        color: @magenta-color;
+        margin: 15px 0 8px;
+        text-align: center;
+        width: 280px;
+
+        span {
+            display: block;
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: 700;
+            color: @common-color;
+            margin-bottom: 3px;
+        }
+
+        &--write {
+            margin: 12px 0 10px 4px;
+        }
+    }
+
+    @media @tablet-widths {
+        min-height: 355px;
+
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+            margin-top: 46px;
+        }
+
+        &__items {
+            justify-content: space-around;
+        }
+
+        &__item {
+            min-height: 81px;
+
+            &--call {
+                margin: 12px 0 8px -13px;
+
+                span {
+                    margin-bottom: 4px;
+                }
+            }
+
+            &--write {
+                margin: 12px -11px 8px 0;
+
+                span {
+                    margin-bottom: 6px;
+                }
+            }
+
+            &--come {
+                margin: 13px 0 8px;
+
+                span {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &::after {
+            height: 70px;
+            bottom: -70px;
+        }
+    }
+
+    @media @desktop-widths {
+        min-height: 300px;
+
+        &__title {
+            font-size: 50px;
+            line-height: 59px;
+            margin-top: 64px;
+        }
+
+        &__items {
+            justify-content: space-around;
+        }
+
+        &__item {
+            margin-top: 16px;
+
+            span {
+                margin-bottom: 24px;
+            }
+
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+
+        &::after {
+            height: 103px;
+            bottom: -103px;
+        }
+    }
+}
