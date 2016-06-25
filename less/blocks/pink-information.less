@@ -315,7 +315,7 @@
     }
 }
 
-@media (min-resolution: 1.5), (min-resolution: 144dpi) {
+@media @mobile-widths-only and (min-resolution: 1.5), @mobile-widths-only and (min-resolution: 144dpi) {
     .pink-information__items {
         background-image: url("../img/iphone-screen-mobile@2x.png");
         background-size: 157px auto;
@@ -323,13 +323,15 @@
 }
 
 @media @tablet-widths and (min-resolution: 1.5), @tablet-widths and (min-resolution: 144dpi) {
-    .pink-information__items::after {
-        background-image: url("../img/iphone-screen-tablet-3@2x.png");
-        background-size: 268px auto;
+    .pink-information__items {
+        background: @grey-background;
+
+        &::after {
+            background-image: url("../img/iphone-screen-tablet-3@2x.png");
+            background-size: 268px auto;
+        }
     }
 }
-
-
 
 @media @desktop-widths and (min-resolution: 1.5), @desktop-widths and (min-resolution: 144dpi) {
     .pink-information__item {
