@@ -68,7 +68,7 @@ window.onload = function() {
       zoom: 17
     });
     var markerImage = new google.maps.MarkerImage(
-      "../img/map-marker.png",
+      "img/map-marker.png",
       new google.maps.Size(36, 35),
       new google.maps.Point(0, 0),
       new google.maps.Point(20, 20)

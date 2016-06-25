@@ -65,25 +65,26 @@
         }
 
         &--hit {
-            background: @common-color url("../../img/bg-hit.svg") 0 0 no-repeat;
+            background: @common-color url("../img/bg-hit.svg") 0 0 no-repeat;
             border: 2px solid @dark_grey-background;
             border-top: none;
             border-bottom: none;
         }
 
         &--enabled {
-            background: #fff url("../../img/icon-yes.svg") 93% 19px no-repeat;
+            background: #fff url("../img/icon-yes.svg") 93% 19px no-repeat;
             background-size: 30px;
         }
 
         &--disabled {
-            background: #fff url("../../img/icon-no.svg") 92% 15px no-repeat;
+            background: #fff url("../img/icon-no.svg") 92% 15px no-repeat;
             background-size: 25px;
         }
     }
 
     @media @tablet-widths {
-    min-height: 377px;
+        min-height: 377px;
+
         &__items {
             width: 88%;
         }
@@ -129,10 +130,11 @@
 
     @media @desktop-widths {
         min-height: 525px;
+
         &__items {
             width: 940px;
             margin-left: -470px;
-            top: 148px
+            top: 148px;
         }
 
         &__cell {
