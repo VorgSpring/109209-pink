@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     svgstore: {
       options: {
         svg: {
-          style : "display: none"
+          style: "display: none"
         }
       },
       symbols: {

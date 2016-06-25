@@ -8,7 +8,9 @@
     <script src="js/picturefill.js"></script>
 </head>
 <body>
-    <header class="page-header">
+    <header class="page-header page-header--without-script">
+        <!--Класс "main-header__wrapper--opened" меняет цвет фона (открытое меню) -->
+        <!--Класс "main-header__wrapper--closed" меняет цвет фона (закрытое меню) -->
         <div class="page-header__wrapper page-header__wrapper--opened">
             <div class="page-header__container">
                 <div class="page-header__logo">
@@ -91,7 +93,11 @@
                     </a>
                 </div>
                 <nav class="main-navigation">
+                    <!--Класс "main-navigation__toggle--opened" отображает кнопку крест (открытое меню) -->
+                    <!--Класс "main-navigation__toggle--closed" отображает кнопку гамбургер (закрытое меню) -->
                     <span class="main-navigation__toggle main-navigation__toggle--opened">Открыть меню</span>
+                    <!--Класс "main-navigation__items--opened" отображает навигацию (открытое меню) -->
+                    <!--Класс "main-navigation__items--closed" скрывает навигацию (закрытое меню) -->
                     <ul class="main-navigation__items main-navigation__items--opened">
                         <li class="main-navigation__item"><a href="index.html">Главная</a></li>
                         <li class="main-navigation__item"><a>Фотографии</a></li>
@@ -101,7 +107,7 @@
                 </nav>
             </div>
         </div>
-        <div class="pink-intro">
+        <div class="pink-intro pink-intro--without-script">
             <h1 class="pink-intro__title pink-intro__title--photo">Фотографии пользователей</h1>
         </div>
     </header>
