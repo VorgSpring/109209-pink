@@ -2,13 +2,12 @@
     .container;
     padding-bottom: 1px;
 
+    &--without-script {
+        margin-top: 328px;
+    }
+
     &--index {
         background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 105px;
-
-        @media @retina {
-            background-image: url("../img/iphone-hand-mobile@2x.png");
-            background-size: 50% auto;
-        }
     }
 
     &__container {
@@ -95,14 +94,8 @@
     }
 
     @media @tablet-widths {
-
         &--index {
-            background: url("../img/iphone-hand-tablet@1x.png") no-repeat right 74px;
-
-            @media @retina {
-                background-image: url("../img/iphone-hand-tablet@2x.png");
-                background-size: 50% auto;
-            }
+            background: url("../img/iphone-hand-tablet@1x.png") no-repeat right 75px;
         }
 
         &__container {
@@ -149,11 +142,10 @@
     @media @desktop-widths {
         &--index {
             background: url("../img/iphone-hand-desktop@1x.png") no-repeat 145px 98px;
+        }
 
-            @media @retina {
-                background-image: url("../img/iphone-hand-desktop@2x.png");
-                background-size: 50% auto;
-            }
+        &--without-script {
+            margin-top: 0;
         }
 
         &__container {
@@ -188,5 +180,29 @@
         &__availability {
             margin: 55px 0;
         }
+    }
+}
+
+
+@media (min-resolution: 1.5), (min-resolution: 144dpi) {
+    .pink-intro--index {
+        background-image: url("../img/iphone-hand-mobile@2x.png");
+        background-size: 258px auto;
+    }
+}
+
+@media @tablet-widths and (min-resolution: 1.5), @tablet-widths and (min-resolution: 144dpi) {
+    .pink-intro--index {
+        background-image: url("../img/iphone-hand-tablet@2x.png");
+        background-size: 700px auto;
+    }
+}
+
+
+
+@media @desktop-widths and (min-resolution: 1.5), @desktop-widths and (min-resolution: 144dpi) {
+    .pink-intro--index {
+        background-image: url("../img/iphone-hand-desktop@2x.png");
+        background-size: 1050px auto;
     }
 }
